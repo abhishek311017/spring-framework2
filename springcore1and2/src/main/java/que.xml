@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+
+	<bean id="question1" class="com.abhishek.Hello">
+
+		<property name="list">
+			<list>
+				<ref bean="q1" />
+				<ref bean="q2" />
+				<ref bean="q3" />
+			</list>
+		</property>
+
+
+		<!--  property name="set">
+			<set>
+				<ref bean ="q1" />
+				<ref  bean = "q2" />
+				<ref bean="q3" />
+			</set>
+		</property>
+
+
+		<property name="map">
+			<map>
+				<entry key="1" value-ref="q1" />
+				<entry key="2" value-ref="q2" />
+				<entry key="3" value-ref="q3" />
+			</map>
+		</property>-->
+
+	</bean>
+	<bean id="q1" class="com.abhishek.Question">
+		<property name="questionId" value="1" />
+		<property name="question" value="kya" />
+		<property name="answers" value="ha" />
+	</bean>
+
+	<bean id="q2" class="com.abhishek.Question">
+		<property name="questionId" value="2" />
+		<property name="question" value="wo" />
+		<property name="answers" value="yes" />
+	</bean>
+
+	<bean id="q3" class="com.abhishek.Question">
+		<property name="questionId" value="3" />
+		<property name="question" value="mama" />
+		<property name="answers" value="hmm" />
+	</bean>
+</beans>
